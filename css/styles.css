@@ -301,6 +301,7 @@ kbd kbd {
 
 figure {
   margin: 0 0 1rem;
+  background-color : var(--bs-gray-400);
 }
 
 img,

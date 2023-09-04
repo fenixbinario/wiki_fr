@@ -10,8 +10,9 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/javascript-obfuscator/dist/index.browser.js"></script>
     </head>
-    <body layer="des inst intr mvc">
+    <body layer="intr des inst mvc">
         <div class="d-flex" id="wrapper">
             <!-- Sidebar-->
             <div class="border-end bg-white" id="sidebar-wrapper">
@@ -19,7 +20,7 @@
                 <div class="list-group list-group-flush">
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" view="body/des">Descripción</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" view="body/inst">Instalación</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Introducción</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!" view="body/intr">Introducción</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">MVC</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Profile</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Status</a>
@@ -51,11 +52,12 @@
                 </nav>
                 <des load="pages/des.html"> </des>
                 <inst load="pages/inst.html"> </inst>
+                <intr load="pages/intr.html"> </intr>
             </div>
         </div>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/javascript-obfuscator/dist/index.browser.js"></script>
+     
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
         <script src="fr_jq.js"> </script>
