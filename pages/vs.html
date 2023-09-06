@@ -1,0 +1,101 @@
+<!-- Page content-->
+<div class="container-fluid">
+    <h1 class="mt-4">FENIX RELOAD</h1>
+    <h3 class="mt-4">MVC vs MVVM</h3>
+    <h5>¿Qué es MVC?</h5>
+    <p>
+    MVC es un patrón arquitectónico que separa una aplicación en tres componentes lógicos principales: Modelo, Vista y Controlador. De ahí la abreviatura MVC. El MVC de forma completa es Model View Controller.
+    <br>
+    En esta arquitectura, un componente se construye para manejar aspectos de desarrollo específicos de una aplicación. MVC separa la lógica empresarial y la capa de presentación entre sí. Este patrón arquitectónico se utiliza principalmente para interfaces gráficas de usuario (GUI) de escritorio.
+    </p>
+    <img class="img-fluid" src="/assets/MVC3.png" alt="">
+    <h5>¿Qué es MVVM?</h5>
+    <p>
+        La arquitectura MVVM facilita una separación del desarrollo de la interfaz gráfica de usuario con la ayuda del lenguaje de marcado o código GUI. La forma completa de MVVM es Model–View–ViewModel.
+        <br>
+        El modelo de vista de MVVM es un convertidor de valor, lo que significa que es responsabilidad del modelo de vista exponer los objetos de datos del modelo de tal manera que los objetos se administren y presenten fácilmente.
+    </p>
+    <img class="img-fluid" src="/assets/MVVM3.png">
+    <hr>
+    <h5>TABLA COMPARATIVA</h5>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col"><b>MVC <sup>Model View Controller</sup></b></th>
+                <th scope="col"><b>MVVM <sup>Model–View–ViewModel</sup></b></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <p>El controlador es el punto de entrada a la aplicación.</p>
+                </td>
+                <td>
+                    La vista es el punto de entrada a la aplicación.
+                </td>  
+            </tr>
+            <tr>
+                <td>
+                    <p>Una a muchas relaciones entre Controller y View.</p>
+                </td>
+                <td>
+                    Una a muchas relaciones entre View y View Model.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>View no tiene referencia al controlador.</p>
+                </td>
+                <td>
+                    View tiene referencias al modelo de vista.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>MVC es modelo antiguo.</p>
+                </td>
+                <td>
+                    MVVM es un modelo relativamente nuevo.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Difícil de leer, cambiar, probar por unidad y reutilizar este modelo
+                </td>
+                <td>
+                    El proceso de depuración será complicado cuando tengamos enlaces de datos complejos.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    El componente del modelo MVC se puede probar por separado del usuario
+                </td>
+                <td>
+                    Fácil para pruebas unitarias separadas y el código está controlado por eventos.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h5>Diferencias clave entre MVC y MVVM</h5>
+    <ul>
+        <li>
+            <p>El marco MVC es un patrón arquitectónico que separa una aplicación en tres componentes lógicos principales: Modelo, Vista y Controlador. Por otro lado, MVVM facilita una separación del desarrollo de la interfaz gráfica de usuario con la ayuda del lenguaje de marcado o código GUI.</p>
+        </li>
+        <li>
+            <p>
+               En MVC, el controlador es el punto de entrada a la aplicación, mientras que en MVVM, la vista es el punto de entrada a la aplicación.
+            </p>
+        </li>
+        <li>
+            <p>
+               El componente MVC Model se puede probar por separado del usuario, mientras que MVVM es fácil para pruebas unitarias separadas y el código está controlado por eventos.
+            </p>
+        </li>
+        <li>
+            <p>
+               La arquitectura MVC tiene relaciones de "uno a muchos" entre Controller y View, mientras que en la arquitectura MVVC, "uno a muchos" relaciones entre View & View Model.
+            </p>
+        </li>
+    </ul>
+</div>
