@@ -5,59 +5,67 @@
     <h4 class="text-white bg-dark">API, Websocket y MQTT</h4>
     <p>El elemento server <code>&lt;server&gt;</code> es una palabra reservada utilizada dentro del <b>body</b>.
     <br>
-    Dentro del elemento <code>&lt;server&gt;&lt;/server&gt;</code> podemos declarar los servidores a los que vamos a conectarnos.</p>
-    <h4 class="text-white bg-dark"><code>&lt;server&gt;</code></h4>
+    Dentro del elemento <code>&lt;server&gt;&lt;/server&gt;</code> podemos declarar los servidores a los que vamos a conectarnos.
+    </p>
+    <h4 id="server" class="text-white bg-dark"><code>&lt;server&gt;</code></h4>
     <p>Por <b>ejemplo</b> si queremos conectarnos a la API de <a href="https://rickandmortyapi.com" target="_blank">https://rickandmortyapi.com/api</a> 
         podemos declararlo como un elemento dentro del <code>&lt;server&gt;&lt;/server&gt;</code> lo llamaremos <code>&lt;rick-morty&gt;&lt;/rick-morty&gt;</code> para este ejemplo.</p>
     <figure class="highlight">
-        <pre>
+    <pre>
             
         <code>
-            &lt;!DOCTYPE html&gt;
+        &lt;!DOCTYPE html&gt;
+            .....
+            .....
+            &lt;body&gt;                    
+                &lt;server&gt;
+                    &lt;rick-morty&gt;&lt;/rick-morty&gt;
+                &lt;/server&gt;                   
                 .....
                 .....
-                &lt;body&gt;                    
-                    &lt;server&gt;
-                        &lt;rick-morty&gt;&lt;/rick-morty&gt;
-                    &lt;/server&gt;                   
-                    .....
-                    .....
-                &lt;/body&gt;</code>
-                .....
-                .....
-        </pre>
+            &lt;/body&gt;
+            .....
+            .....
+        </code>
+    </pre>
     </figure>
-
-    <p>Una vez tenemos delarado nuestro elemento <code>&lt;rick-morty&gt;&lt;/rick-morty&gt;</code> 
+    <h4 class="text-white bg-dark"><code>host="" headers="" role=""</code></h4>
+    <p>Una vez tenemos declarado nuestro elemento <code>&lt;rick-morty&gt;&lt;/rick-morty&gt;</code> 
         vamos a configurar el servidor añadiendo los atributos:
         <ul>
             <li>
                 <code>host=""</code> para decirle el nombre del servidor y cuales seran las cabeceras de las peticiones.
             </li>
             <li>
-                <code>headers=""</code> se define las cabeceras de las peticiones y despues se declaran.
+                <code>headers=""</code> se define las cabeceras de las peticiones y despues se declaran, por defecto se puede dejar vacio.
             </li>
             <li>
-                <code>role=""</code> se define el role de acceso y privilegios al servidor.
+                <code>role=""</code> se define el role de acceso y privilegios al servidor, por defecto se puede dejar vacio.
             </li>
         </ul>
     </p>
     <figure class="highlight">
-        <pre>
-            
-        <code>&lt;!DOCTYPE html&gt;
+        <pre>            
+        <code>
+        &lt;!DOCTYPE html&gt;
+            .....
+            .....
+            &lt;body&gt;                    
+                &lt;server&gt;
+                    &lt;rick-morty host="https://rickandmortyapi.com/api" headers="Content-Type" Content-Type="application-json" role="user"&gt;
+                    &lt;/rick-morty&gt;
+                &lt;/server&gt;                   
                 .....
                 .....
-                &lt;body&gt;                    
-                    &lt;server&gt;
-                        &lt;rick-morty host="https://rickandmortyapi.com/api" headers="Content-Type" Content-Type="application-json" role="user"&gt;
-                        &lt;/rick-morty&gt;
-                    &lt;/server&gt;                   
-                    .....
-                    .....
-                &lt;/body&gt;</code>
-                .....
-                .....
+            &lt;/body&gt;
+            .....
+            .....
+        </code>
         </pre>
     </figure>
+    <p>
+    En este ejemplo queremos obtener datos de la API de <b>Rick&Morty</b> en formato <code>JSON</code> por eso hemos declarado en <code>headers=""</code> que nuestras peticiones
+    tendrán una cabecera de <code>Content-Type</code> para más adelante especificarle que será <code>application-json</code>.
+    </p>
+    <hr>
 </div>

@@ -22,47 +22,47 @@
     <ul>
     <li>
     <p><code>&lt;server&gt;&lt;/server&gt;</code> --> <b>ELEMENTO</b> --> En su interior se declaran los servidores a los que se conectará nuestra app/web.
-        <pre><code>
+        <figure><pre><code>
         &lt;body&gt;
             &lt;server&gt;
                 &lt;api host="domain.com" headers="content-type" role="admin"&gt;&lt;/api&gt;
             &lt;/server&gt;
         &lt;/body&gt;
-    </code></pre></p>
+    </code></pre></figure></p>
     </li>
     <li>
         <p><code>host=""</code> --> <b>ATRIBUTO</b> --> En su interior se declaran la dirección del servidor.
-            <pre><code>
+            <figure><pre><code>
             &lt;body&gt;
                 &lt;server&gt;
                     &lt;api host="localhost:8080" &gt;&lt;/api&gt;
                 &lt;/server&gt;
             &lt;/body&gt;
-        </code></pre></p>
+        </code></pre></figure></p>
     </li>
     <li>
         <p><code>role=""</code> --> <b>ATRIBUTO</b> --> En su interior se declara el nivel de privilegio de acceso al servidor.
-            <pre><code>
+            <figure><pre><code>
             &lt;body&gt;
                 &lt;server&gt;
                     &lt;api role="user" &gt;&lt;/api&gt;
                 &lt;/server&gt;
             &lt;/body&gt;
-        </code></pre></p>
+        </code></pre></figure></p>
     </li>
     <li>
         <p><code>auth=""</code> --> <b>ATRIBUTO</b> --> es lo mismo que <code>headers=""</code> con la única diferencia que es para servidores websockets.
-            <pre><code>
+            <figure><pre><code>
             &lt;body&gt;
                 &lt;server&gt;
                     &lt;api host="ws://mydomain.co" auth="access_token" access_token="eyJh.2gY8Lp" role="user"&gt;&lt;/api&gt;
                 &lt;/server&gt;
             &lt;/body&gt;
-        </code></pre></p>
+        </code></pre></figure></p>
     </li>
     <li>
         <p><code>layer=""</code> --> <b>ATRIBUTO</b> --> sirve para declarar las capas que están dentro de un contenedor, estas capas pasan a convertirse en un elemento dentro del DOM. Pueden anidarse tantas veces como se queira.
-            <pre><code>
+            <figure><pre><code>
             &lt;body layer="setting contact"&gt;
                 &lt;server&gt;
                     &lt;api host="http://" &gt;&lt;/api&gt;
@@ -78,29 +78,29 @@
                     &lt;div&gt;&lt;/div&gt;
                 &lt;/contact&gt;
             &lt;/body&gt;
-        </code></pre></p>
+        </code></pre></figure></p>
     </li>
     <li>
         <p><code>view=""</code> --> <b>ATRIBUTO</b> --> Muestra la capa a la que nos queremos dirigir y la hace visible.
             .
-            <pre><code>
+            <figure><pre><code>
             &lt;button type="button" view="body/contact" &gt; CONTACT &lt;button&gt;
 
-        </code></pre></p>
+        </code></pre></figure></p>
     </li>
     <li>
         <p><code>&lt;role&gt;&lt;/role&gt;</code> --> <b>ELEMENTO</b> --> Muestra dentro de una capa  que se muestra segun los previlegios diseñados para nuestra aap/web.
-        <pre><code>
+        <figure><pre><code>
             &lt;body layer="setting"&gt;
                 &lt;setting&gt;
                     &lt;role role="" server=""&gt;&lt;/role&gt;
                 &lt;/setting&gt;
             &lt;/body&gt;
-        </code></pre></p>
+        </code></pre></figure></p>
     </li>
     <li>
         <p><code>role=""</code> --> <b>ATRIBUTO</b> --> Define el valor de privilegio del elemento <code>&lt;role&gt;</code> .
-        <pre><code>
+        <figure><pre><code>
             &lt;body layer="setting"&gt;
                 &lt;server&gt;
                     &lt;api host="http://" &gt;&lt;/api&gt;
@@ -111,11 +111,11 @@
                     &lt;role role="root" server="api"&gt;&lt;/role&gt;
                 &lt;/setting&gt;
             &lt;/body&gt;
-        </code></pre></p>
+        </code></pre></figure></p>
     </li>
     <li>
         <p><code>server=""</code> --> <b>ATRIBUTO</b> --> Define a que servidor se obtiene ese nivel de privilegio en el elemento <code>&lt;role&gt;</code>.
-        <pre><code>
+        <figure><pre><code>
             &lt;body layer="setting"&gt;
                 &lt;server&gt;
                     &lt;api host="http://" &gt;&lt;/api&gt;
@@ -128,11 +128,11 @@
                     &lt;role role="admin" server="api2"&gt;&lt;/role&gt;
                 &lt;/setting&gt;
             &lt;/body&gt;
-        </code></pre></p>
+        </code></pre></figure></p>
     </li>
     <li>
         <p><code>onload=""</code> --> <b>ATRIBUTO</b> --> Carga un archivo .html dentro de los elementos <code>&lt;role&gt;, &lt;div&gt;</code>.
-        <pre><code>
+        <figure><pre><code>
             &lt;body layer="setting"&gt;
                 &lt;server&gt;
                     &lt;api host="http://" &gt;&lt;/api&gt;
@@ -143,30 +143,30 @@
                     &lt;role role="root" onload="root.html" server="api"&gt;&lt;/role&gt;
                 &lt;/setting&gt;
             &lt;/body&gt;
-        </code></pre></p>
+        </code></pre></figure></p>
     </li>
     <li>
         <p><code>lang=""</code> --> <b>ATRIBUTO</b> --> Los elementos que contengan este atributo mostraran texto, imagenes y enlaces segun el idioma del navegador. si el elemento es un <code>&lt;role&gt;, &lt;div&gt;</code> se conporta como un <code>onload=""</code> con la diferencia que cargará un html u otro segun el idioma del navegador.
-            <pre><code>
+            <figure><pre><code>
             &lt;p lang="hello" &gt;&lt;p&gt;
             &lt;img lang="hello" &gt;
             &lt;a lang="href" href="hello" &gt;Link&lt;a&gt;
             &lt;role role="invitado" lang="hello" server="api"&gt;&lt;/role&gt;
-        </code></pre></p>
+        </code></pre></figure></p>
     </li>
     <li>
         <p><code>data=""</code> --> <b>ATRIBUTO</b> --> Define los datos que se incluiran en el cuerpo de un mensaje <code>method, websocket</code>.
-            <pre><code>
+            <figure><pre><code>
                 &lt;form data="role user pass"&gt;
                     &lt;input role="" &gt;&lt;/input&gt;
                     &lt;input user="" &gt;&lt;/input&gt;
                     &lt;input pass="" &gt;&lt;/input&gt;
                 &lt;/form&gt;
-        </code></pre></p>
+        </code></pre></figure></p>
     </li>
     <li>
         <p><code>method=""</code> --> <b>ATRIBUTO</b> --> se utiliza para peticiones a una <code>API, WEBSOCKET, MQTT</code>, obtiene los datos que previamente se han declarado en el atributo body="".
-            <pre><code>
+            <figure><pre><code>
                 method="get"
                 method="onget"
                 method="post"
@@ -178,15 +178,15 @@
                 method="on" 
                 method="pub"
                 method="sub"    
-        </code></pre></p>
+        </code></pre></figure></p>
         <p>Para enviar datos a una <code>API</code> se puede acompañar al atributo <code>method=""</code> con los siguientes atributos</p>
-        <pre><code>
+        <figure><pre><code>
             host="domain" path="/user" print="form" println="step" body="div" clear="div"   
-        </code></pre>
+        </code></pre></figure>
         <p>Para enviar datos a un server <code>WEBSOCKET</code> se puede acompañar al atributo <code>method=""</code> con los siguientes atributos</p>
-        <pre><code>
+        <figure><pre><code>
             host="domain" event="name-event"  print="form" println="step" body="div" clear="div"   
-        </code></pre>
+        </code></pre></figure>
     </li>
     </ul>
 </div>
