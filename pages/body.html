@@ -6,7 +6,7 @@
     <p>
         En el <code>body</code> vamos a declarar las capas de nuestra aplicacion mediante el atributo <code>layer=""</code>, para este ejemplo queremos una web con la página de incio, otra que la llamaremos Rick y otra Morty.
     </p>
-    <h4 id="server" class="text-white bg-dark"><code>&lt;body layer="app rick morty"&gt;</code></h4>
+    <h4 id="server" class="text-white"><code>&lt;body layer="app rick morty"&gt;</code></h4>
     <p>Para este <b>ejemplo</b> vamos a crear tres vistas/páginas <code>&lt;app&gt; &lt;rick&gt; &lt;morty&gt;</code> para mostrar el poder de <code>fr.js</code>
     puedes ver el resultado en el <a href="https://fenixbinario.github.io/wiki_fr/03.html" target="_blank"><b>DEMO 03</b></a> </p>
     <figure class="highlight">
@@ -28,7 +28,7 @@
         </code>
     </pre>
     </figure>
-    <h4 class="text-white bg-dark"><code>load=""</code></h4>
+    <h4 id="load" class="text-white"><code>load=""</code></h4>
     <p>
     Unas de las necesidades de nuestros desarrollos es que sean escalables y mantenibles, para ello unas de las necesidades es dividir por partes nuestro código.
     con el atributo <code>load=""</code> nos permite añadir un trozo de código <b>html</b>
@@ -53,9 +53,102 @@
         </code>
         </pre>
     </figure>
+    <hr>
+    <h4 id="view" class="text-white"><code>view=""</code></h4>
     <p>
-    En este ejemplo queremos obtener datos de la API de <b>Rick&Morty</b> en formato <code>JSON</code> por eso hemos declarado en <code>headers=""</code> que nuestras peticiones
-    tendrán una cabecera de <code>Content-Type</code> para más adelante especificarle que será <code>application-json</code>.
+    Este atributo <code>view=""</code> nos permite mostrar la capa de nuestra <b>aplicación</b> que queremos hacer visible. 
+     Mira el resulta aquí <a href="https://fenixbinario.github.io/wiki_fr/04.html" target="_blank"><b>DEMO 04</b>.</a>
     </p>
+    <figure class="highlight">
+        <pre>            
+        <code>
+            &lt;!DOCTYPE html&gt;
+            .....
+            .....
+            &lt;body layer="app rick morty"&gt; 
+                &lt;nav&gt;
+                    &lt;ul&gt;
+                        &lt;li view="body/app"&gt;Home&lt;/li&gt;
+                        &lt;li view="body/rick"&gt;Rick&lt;/li&gt;
+                        &lt;li view="body/morty"&gt;Morty&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/nav&gt;                  
+                &lt;app load="app.html" &gt;&lt;/app&gt;
+                &lt;rick load="rick.html" &gt;&lt;/rick&gt;
+                &lt;morty load="morty.html" &gt;&lt;/morty&gt;          
+                .....
+                .....
+            &lt;/body&gt;
+            .....
+            .....
+        </code>
+        </pre>
+    </figure>
+    <hr>
+    <h4 id="lang" class="text-white"><code>lang=""</code></h4>
+    <p>
+    En nuestra carpeta raiz colocamos los archivos .json con los idiomas nombrandolos con el el código de idioma y pais <code>es-ES.json en-EN.json en-UK.json</code>.
+    <figure class="highlight">
+        <p class="text-info">es-ES.json</p>
+        <pre>            
+        <code>            
+            {
+                "hi": "Hola",
+                "bye": "Adios"
+            }
+        </code>
+        </pre>
+    </figure>
+    <figure class="highlight">
+        <p class="text-info">en-EN.json</p>
+        <pre>            
+        <code>            
+            {
+                "hi": "Hi",
+                "bye": "Bye"
+            }
+        </code>
+        </pre>
+    </figure>
+    <figure class="highlight">
+        <p class="text-info">en-UK.json</p>
+        <pre>            
+        <code>            
+            {
+                "hi": "Hello",
+                "bye": "GoodBye"
+            }
+        </code>
+        </pre>
+    </figure>
+    Este atributo <code>lang=""</code> se puede colocar en cualquier elemento del <b>DOM</b> para ello solo hay que poner el nombre de la clave que aparece en el <code>.json</code>. 
+     Mira el resulta aquí <a href="https://fenixbinario.github.io/wiki_fr/05.html" target="_blank"><b>DEMO 05</b>.</a>
+    </p>
+    <h1 lang="hi"></h1>
+    <figure class="highlight">
+        <pre>            
+        <code>
+            &lt;!DOCTYPE html&gt;
+            .....
+            .....
+            &lt;body layer="app rick morty"&gt; 
+                &lt;nav&gt;
+                    &lt;ul&gt;
+                        &lt;li view="body/app"&gt;Home&lt;/li&gt;
+                        &lt;li view="body/rick"&gt;Rick&lt;/li&gt;
+                        &lt;li view="body/morty"&gt;Morty&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/nav&gt;                  
+                &lt;app load="app.html" &gt;&lt;/app&gt;
+                &lt;rick load="rick.html" &gt;&lt;/rick&gt;
+                &lt;morty load="morty.html" &gt;&lt;/morty&gt;          
+                .....
+                .....
+            &lt;/body&gt;
+            .....
+            .....
+        </code>
+        </pre>
+    </figure>
     <hr>
 </div>
