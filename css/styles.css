@@ -268,14 +268,15 @@ samp {
 pre {
   display: block;
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin: 1rem;
+  padding-right: 1rem;
   overflow: auto;
   font-size: 0.875em;
 }
 pre code {
   font-size: inherit;
-  color: inherit;
   word-break: normal;
+  color: var(--bs-white)
 }
 
 code {
@@ -301,7 +302,7 @@ kbd kbd {
 
 figure {
   margin: 0 0 1rem;
-  background-color : var(--bs-gray-400);
+  background-color : var(--bs-purple);
 }
 
 img,
