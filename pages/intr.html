@@ -131,22 +131,22 @@
         </code></pre></figure></p>
     </li>
     <li>
-        <p><code>onload=""</code> --> <b>ATRIBUTO</b> --> Carga un archivo .html dentro de los elementos <code>&lt;role&gt;, &lt;div&gt;</code>.
+        <p><code>load=""</code> --> <b>ATRIBUTO</b> --> Carga un archivo .html dentro de los elementos <code>&lt;role&gt;, &lt;div&gt;</code>.
         <figure><pre><code>
             &lt;body layer="setting"&gt;
                 &lt;server&gt;
                     &lt;api host="http://" &gt;&lt;/api&gt;
                 &lt;/server&gt;
                 &lt;setting&gt;
-                    &lt;role role="invitado" onload="invitado.html" server="api"&gt;&lt;/role&gt;
-                    &lt;role role="admin" onload="admin.html" server="api"&gt;&lt;/role&gt;
-                    &lt;role role="root" onload="root.html" server="api"&gt;&lt;/role&gt;
+                    &lt;role role="invitado" load="invitado.html" server="api"&gt;&lt;/role&gt;
+                    &lt;role role="admin" load="admin.html" server="api"&gt;&lt;/role&gt;
+                    &lt;role role="root" load="root.html" server="api"&gt;&lt;/role&gt;
                 &lt;/setting&gt;
             &lt;/body&gt;
         </code></pre></figure></p>
     </li>
     <li>
-        <p><code>lang=""</code> --> <b>ATRIBUTO</b> --> Los elementos que contengan este atributo mostraran texto, imagenes y enlaces segun el idioma del navegador. si el elemento es un <code>&lt;role&gt;, &lt;div&gt;</code> se conporta como un <code>onload=""</code> con la diferencia que cargará un html u otro segun el idioma del navegador.
+        <p><code>lang=""</code> --> <b>ATRIBUTO</b> --> Los elementos que contengan este atributo mostraran texto, imagenes y enlaces segun el idioma del navegador. si el elemento es un <code>&lt;role&gt;, &lt;div&gt;</code> se conporta como un <code>load=""</code> con la diferencia que cargará un html u otro segun el idioma del navegador.
             <figure><pre><code>
             &lt;p lang="hello" &gt;&lt;p&gt;
             &lt;img lang="hello" &gt;
