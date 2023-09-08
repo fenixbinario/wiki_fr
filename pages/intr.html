@@ -21,7 +21,7 @@
     <p>Hay 13 palabras reservadas y se añade como cualquier otro elemento de HTML dentro del <b>DOM</b>.</p>
     <ul>
     <li>
-    <p><code>&lt;server&gt;&lt;/server&gt;</code> --> <b>ELEMENTO</b> --> En su interior se declaran los servidores a los que se conectará nuestra app/web.
+    <h2><code>&lt;server&gt;&lt;/server&gt;</code></h2> <p><b>ELEMENTO</b> --> En su interior se declaran los servidores a los que se conectará nuestra app/web.
         <figure><pre><code>
         &lt;body&gt;
             &lt;server&gt;
@@ -31,7 +31,7 @@
     </code></pre></figure></p>
     </li>
     <li>
-        <p><code>host=""</code> --> <b>ATRIBUTO</b> --> En su interior se declaran la dirección del servidor.
+        <h2><code>host=""</code></h2><p><b>ATRIBUTO</b> --> En su interior se declaran la dirección del servidor.
             <figure><pre><code>
             &lt;body&gt;
                 &lt;server&gt;
@@ -41,7 +41,7 @@
         </code></pre></figure></p>
     </li>
     <li>
-        <p><code>role=""</code> --> <b>ATRIBUTO</b> --> En su interior se declara el nivel de privilegio de acceso al servidor.
+        <h2><code>role=""</code></h2><p><b>ATRIBUTO</b> --> En su interior se declara el nivel de privilegio de acceso al servidor.
             <figure><pre><code>
             &lt;body&gt;
                 &lt;server&gt;
@@ -51,7 +51,7 @@
         </code></pre></figure></p>
     </li>
     <li>
-        <p><code>auth=""</code> --> <b>ATRIBUTO</b> --> es lo mismo que <code>headers=""</code> con la única diferencia que es para servidores websockets.
+        <h2><code>auth=""</code></h2><p><b>ATRIBUTO</b> --> es lo mismo que <code>headers=""</code> con la única diferencia que es para servidores websockets.
             <figure><pre><code>
             &lt;body&gt;
                 &lt;server&gt;
@@ -61,7 +61,7 @@
         </code></pre></figure></p>
     </li>
     <li>
-        <p><code>layer=""</code> --> <b>ATRIBUTO</b> --> sirve para declarar las capas que están dentro de un contenedor, estas capas pasan a convertirse en un elemento dentro del DOM. Pueden anidarse tantas veces como se queira.
+        <h2><code>layer=""</code></h2><p><b>ATRIBUTO</b> --> sirve para declarar las capas que están dentro de un contenedor, estas capas pasan a convertirse en un elemento dentro del DOM. Pueden anidarse tantas veces como se queira.
             <figure><pre><code>
             &lt;body layer="setting contact"&gt;
                 &lt;server&gt;
@@ -81,7 +81,7 @@
         </code></pre></figure></p>
     </li>
     <li>
-        <p><code>view=""</code> --> <b>ATRIBUTO</b> --> Muestra la capa a la que nos queremos dirigir y la hace visible.
+        <h2><code>view=""</code></h2><p><b>ATRIBUTO</b> --> Muestra la capa a la que nos queremos dirigir y la hace visible.
             .
             <figure><pre><code>
             &lt;button type="button" view="body/contact" &gt; CONTACT &lt;button&gt;
@@ -89,7 +89,7 @@
         </code></pre></figure></p>
     </li>
     <li>
-        <p><code>&lt;role&gt;&lt;/role&gt;</code> --> <b>ELEMENTO</b> --> Muestra dentro de una capa  que se muestra segun los previlegios diseñados para nuestra aap/web.
+        <h2><code>&lt;role&gt;&lt;/role&gt;</code></h2><p><b>ELEMENTO</b> --> Muestra dentro de una capa  que se muestra segun los previlegios diseñados para nuestra aap/web.
         <figure><pre><code>
             &lt;body layer="setting"&gt;
                 &lt;setting&gt;
@@ -99,7 +99,7 @@
         </code></pre></figure></p>
     </li>
     <li>
-        <p><code>role=""</code> --> <b>ATRIBUTO</b> --> Define el valor de privilegio del elemento <code>&lt;role&gt;</code> .
+        <h2><code>role=""</code></h2><p><b>ATRIBUTO</b> --> Define el valor de privilegio del elemento <code>&lt;role&gt;</code> .
         <figure><pre><code>
             &lt;body layer="setting"&gt;
                 &lt;server&gt;
@@ -114,7 +114,7 @@
         </code></pre></figure></p>
     </li>
     <li>
-        <p><code>server=""</code> --> <b>ATRIBUTO</b> --> Define a que servidor se obtiene ese nivel de privilegio en el elemento <code>&lt;role&gt;</code>.
+        <h2><code>server=""</code></h2><p><b>ATRIBUTO</b> --> Define a que servidor se obtiene ese nivel de privilegio en el elemento <code>&lt;role&gt;</code>.
         <figure><pre><code>
             &lt;body layer="setting"&gt;
                 &lt;server&gt;
@@ -131,7 +131,7 @@
         </code></pre></figure></p>
     </li>
     <li>
-        <p><code>load=""</code> --> <b>ATRIBUTO</b> --> Carga un archivo .html dentro de los elementos <code>&lt;role&gt;, &lt;div&gt;</code>.
+        <h2><code>load=""</code></h2><p><b>ATRIBUTO</b> --> Carga un archivo .html dentro de los elementos <code>&lt;role&gt;, &lt;div&gt;</code>.
         <figure><pre><code>
             &lt;body layer="setting"&gt;
                 &lt;server&gt;
@@ -146,7 +146,7 @@
         </code></pre></figure></p>
     </li>
     <li>
-        <p><code>lang=""</code> --> <b>ATRIBUTO</b> --> Los elementos que contengan este atributo mostraran texto, imagenes y enlaces segun el idioma del navegador. si el elemento es un <code>&lt;role&gt;, &lt;div&gt;</code> se conporta como un <code>load=""</code> con la diferencia que cargará un html u otro segun el idioma del navegador.
+        <h2><code>lang=""</code></h2><p><b>ATRIBUTO</b> --> Los elementos que contengan este atributo mostraran texto, imagenes y enlaces segun el idioma del navegador. si el elemento es un <code>&lt;role&gt;, &lt;div&gt;</code> se conporta como un <code>load=""</code> con la diferencia que cargará un html u otro segun el idioma del navegador.
             <figure><pre><code>
             &lt;p lang="hello" &gt;&lt;p&gt;
             &lt;img lang="hello" &gt;
@@ -155,7 +155,7 @@
         </code></pre></figure></p>
     </li>
     <li>
-        <p><code>data=""</code> --> <b>ATRIBUTO</b> --> Define los datos que se incluiran en el cuerpo de un mensaje <code>method, websocket</code>.
+        <h2><code>data=""</code></h2><p><b>ATRIBUTO</b> --> Define los datos que se incluiran en el cuerpo de un mensaje <code>method, websocket</code>.
             <figure><pre><code>
                 &lt;form data="role user pass"&gt;
                     &lt;input role="" &gt;&lt;/input&gt;
@@ -165,7 +165,7 @@
         </code></pre></figure></p>
     </li>
     <li>
-        <p><code>method=""</code> --> <b>ATRIBUTO</b> --> se utiliza para peticiones a una <code>API, WEBSOCKET, MQTT</code>, obtiene los datos que previamente se han declarado en el atributo body="".
+        <h2><code>method=""</code></h2><p><b>ATRIBUTO</b> --> se utiliza para peticiones a una <code>API, WEBSOCKET, MQTT</code>, obtiene los datos que previamente se han declarado en el atributo body="".
             <figure><pre><code>
                 method="get"
                 method="onget"
