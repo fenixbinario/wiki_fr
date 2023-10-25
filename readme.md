@@ -1,27 +1,6 @@
 # WIKI FENIX RELOAD
 ## fr.js
 
-## Git Commands
-` git push -u origin main  `  ` git commit -m "Text" ` ` git add . ` 
-
-## Clone repository
-```bash
-    git clone https://github.com/fenixbinario/fr.js.git
-```
-### Submodule
-```
-    git submodule add https://github.com/fenixbinario/fr.js.git  fenix_reload
-```
-```
-    git submodule update --init --recursive
-```
-
-## Obfuscated Commands
-```bash
-npx javascript-obfuscator fr_v1.js --compact true --rename-globals true
-```
-
-
 ## TO DO:
 - [x] Desktop Version --> Future
 - [ ] Mobile Version --> Future
